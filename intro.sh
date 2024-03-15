@@ -9,6 +9,7 @@ echo "1. SUMA"
 echo "2. RESTA"
 echo "3. MULTIPLICACION"
 echo "4. DIVISION"
+echo "5. EXPONENCIACION"
 
 read -p "Seleccione una opcion: " opcion
 
@@ -20,6 +21,8 @@ elif [ $opcion -eq 3 ]; then
     respuesta=$((num1 * num2))
 elif [ $opcion -eq 4 ]; then
     respuesta=$((num1 / num2))
+elif [ $opcion -eq 5 ]; then
+    respuesta=$((num1 ** num2))
 fi
 
 echo "La respuesta es: $respuesta" 
