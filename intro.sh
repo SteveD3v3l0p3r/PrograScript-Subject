@@ -22,7 +22,8 @@ elif [ $opcion -eq 3 ]; then
 elif [ $opcion -eq 4 ]; then
     respuesta=$((num1 / num2))
 elif [ $opcion -eq 5 ]; then
-    respuesta=$((num1 ** num2))
+    #respuesta=$((num1 ** num2))
+    respuesta=$(echo "$num1 ^ $num2 " | bc)
 fi
 
 echo "La respuesta es: $respuesta" 
