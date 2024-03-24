@@ -1,8 +1,11 @@
 #!/bin/bash
-read -p "Dime un número: " num1
-read -p "Dime otro número: " num2
+num_mayor=0
 
-respuesta=$((num1+num2))
-resp=$(expr $num1 + $num2)
+for i in $(seq 1 5); do
+    read -p "Ingresa un numero: " numero
+    if [ $numero -ge $num_mayor ]; then
+        num_mayor=$numero
+    fi
+done
 
-echo $resp
+echo "El numero mayor es: $num_mayor" 
