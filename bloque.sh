@@ -1,11 +1,6 @@
 #!/bin/bash
-num_mayor=0
+filename="prueba.txt"
 
-for i in $(seq 1 5); do
-    read -p "Ingresa un numero: " numero
-    if [ $numero -ge $num_mayor ]; then
-        num_mayor=$numero
-    fi
-done
-
-echo "El numero mayor es: $num_mayor" 
+cat $filename
+#grep -v "Acá" "$filename" #Nos muestra la siguiente línea que precede a la de la palabra mecionada.
+#sed -i '/ /g' "$filename" 
